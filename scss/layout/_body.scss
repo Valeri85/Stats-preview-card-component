@@ -1,0 +1,8 @@
+@use '../helpers/functions';
+@use '../helpers/mixins';
+
+body {
+	display: grid;
+	background-color: var(--main-background);
+	text-align: center;
+}

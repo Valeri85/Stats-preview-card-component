@@ -1,0 +1,54 @@
+@use '../base/root' as *;
+
+/* autoprefixer grid: autoplace */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+	font-family: var(--ff-inter);
+	color: var(--white);
+	font-size: 15px;
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	width: 100%;
+	min-height: 100vh;
+	line-height: 1.6;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+ul,
+li,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Make images easier to work with */
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Remove default style from links */
+a {
+	text-decoration: none;
+}

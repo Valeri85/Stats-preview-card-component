@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- Displays site properly based on user's device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<!-- Title -->
+		<title>Frontend Mentor | Stats preview card component</title>
+		<!-- Preload css -->
+		<link rel="preload" href="./css/style.min.css" as="style" />
+		<!-- Css -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Preload fonts -->
+		<link rel="preload" href="fonts/LexendDeca-Regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/Inter-Bold.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/LexendDeca-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
+	</head>
+	<body>
+		<!-- Card -->
+		<main class="main">
+			<picture class="main__picture">
+				<source
+					media="(min-width: 1440px)"
+					srcset="images/image-header-desktop.webp, images/image-header-desktop.jpg"
+				/>
+				<source
+					media="(min-width: 375px)"
+					srcset="images/image-header-mobile.webp, images/image-header-mobile.jpg"
+				/>
+				<img
+					class="main__picture-img"
+					width="480"
+					height="360"
+					src="./images/image-header-mobile.jpg"
+					alt="Programmer girls working in the nice pleasant atmosphere office"
+				/>
+			</picture>
+			<div class="main__body">
+				<h1 class="main__title">
+					Get <span class="main__title-accent">insights</span> that help your business grow.
+				</h1>
+				<p class="main__text">
+					Discover the benefits of data analytics and make better decisions regarding revenue,
+					customer experience, and overall efficiency.
+				</p>
+				<!-- Stats -->
+				<ul class="main__stats" role="list">
+					<li class="main__stats-item"><span class="main__stats-number">10k+</span>companies</li>
+					<li class="main__stats-item"><span class="main__stats-number">314</span>templates</li>
+					<li class="main__stats-item"><span class="main__stats-number">12M+</span>queries</li>
+				</ul>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="footer">
+			Challenge by
+			<a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a class="footer__link" href="https://www.frontendmentor.io/profile/Valeri85" target="_blank"
+				>Valeri</a
+			>.
+		</footer>
+	</body>
+</html>

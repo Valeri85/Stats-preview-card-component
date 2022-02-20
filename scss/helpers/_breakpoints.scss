@@ -1,0 +1,4 @@
+@use 'functions';
+
+$mobile: functions.em(320);
+$desktop: functions.em(1440);

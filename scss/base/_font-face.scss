@@ -1,0 +1,27 @@
+@use '../helpers/functions';
+
+@font-face {
+	font-family: 'Lexend Deca';
+	font-display: swap;
+	src: url('../fonts/LexendDeca-Regular.woff2') format('woff2'),
+		url('../fonts/LexendDeca-Regular.woff') format('woff');
+	font-weight: functions.weight(regular);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Inter;
+	font-display: swap;
+	src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+		url('../fonts/Inter-Regular.woff') format('woff');
+	font-weight: functions.weight(regular);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Inter;
+	font-display: swap;
+	src: url('../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff');
+	font-weight: functions.weight(bold);
+	font-style: normal;
+}

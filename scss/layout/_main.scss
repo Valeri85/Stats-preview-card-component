@@ -1,0 +1,145 @@
+@use '../base/root' as *;
+@use '../helpers/functions';
+@use '../helpers/mixins';
+
+.main {
+	display: flex;
+	flex-direction: column;
+	place-self: center;
+	width: functions.em(280);
+	background-color: var(--card-background);
+	border-radius: functions.em(7);
+	@supports (display: grid) {
+		/* autoprefixer: off */
+		display: grid;
+		grid-template:
+			'picture'
+			'body' /
+			functions.em(280);
+	}
+	@include mixins.desktop {
+		/* autoprefixer: on */
+		display: flex;
+		flex-direction: row;
+		width: functions.em(1065);
+		text-align: left;
+		@supports (display: grid) {
+			/* autoprefixer: off */
+			display: grid;
+			grid-template: 'body picture' / functions.em(550) functions.em(515);
+		}
+	}
+	&__body {
+		/* autoprefixer: on */
+		padding: 2em 1.5em;
+		@supports (display: grid) {
+			/* autoprefixer: off */
+			grid-area: body;
+		}
+		@include mixins.desktop {
+			/* autoprefixer: on */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 55%;
+			padding: 4.25em 5.2em 3.5em 4.25em;
+			order: 1;
+			@supports (display: grid) {
+				/* autoprefixer: off */
+				grid-area: body;
+				width: auto;
+			}
+		}
+	}
+	&__picture,
+	&__picture-img {
+		/* autoprefixer: on */
+		border-top-left-radius: functions.em(7);
+		border-top-right-radius: functions.em(7);
+		@include mixins.desktop {
+			border-top-left-radius: functions.em(0);
+			border-bottom-right-radius: functions.em(7);
+		}
+	}
+	&__picture {
+		background-color: var(--accent);
+		@supports (display: grid) {
+			/* autoprefixer: off */
+			grid-area: picture;
+		}
+		@include mixins.desktop {
+			/* autoprefixer: on */
+			order: 2;
+			@supports (display: grid) {
+				/* autoprefixer: off */
+				grid-area: picture;
+				width: auto;
+			}
+		}
+		&-img {
+			/* autoprefixer: on */
+			width: auto;
+			height: auto;
+			opacity: 0.5;
+		}
+	}
+	&__title {
+		font-size: 1.6rem;
+		line-height: 1.2;
+		@include mixins.desktop {
+			font-size: 2.15rem;
+			line-height: 1.25;
+			letter-spacing: 0.25px;
+		}
+		&-accent {
+			color: var(--accent);
+		}
+	}
+	&__text {
+		margin-top: 1.2em;
+		font-size: 0.88rem;
+		color: var(--main-paragraph);
+		@include mixins.desktop {
+			margin-top: 1.5em;
+			padding-right: 1.25em;
+			line-height: 1.7;
+			letter-spacing: 0.25px;
+		}
+	}
+	&__stats {
+		margin-top: 2em;
+		text-transform: uppercase;
+		@include mixins.desktop {
+			display: flex;
+			margin-top: 3em;
+		}
+		&-item {
+			margin-top: 1.5em;
+			font-family: var(--ff-lexend-deca);
+			font-size: 0.7rem;
+			letter-spacing: 0.5px;
+			color: var(--stat-headings);
+			@include mixins.desktop {
+				margin-left: 5em;
+				font-size: 0.75rem;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:first-child .main__stats-number {
+				text-transform: lowercase;
+			}
+		}
+		&-number {
+			display: block;
+			font-family: var(--ff-inter);
+			font-size: 1.3rem;
+			font-weight: functions.weight(bold);
+			color: var(--white);
+			letter-spacing: normal;
+			@include mixins.desktop {
+				font-size: 1.45rem;
+			}
+		}
+	}
+}
