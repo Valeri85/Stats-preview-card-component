@@ -11,7 +11,7 @@
 		<!-- Preload css -->
 		<link rel="preload" href="./css/style.min.css" as="style" />
 		<!-- Css -->
-		<link rel="stylesheet" href="./css/style.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<!-- Preload fonts -->
 		<link rel="preload" href="fonts/LexendDeca-Regular.woff" as="font" type="font/woff" crossorigin />
 		<link rel="preload" href="fonts/Inter-Regular.woff" as="font" type="font/woff" crossorigin />
@@ -25,13 +25,17 @@
 		<main class="main">
 			<picture class="main__picture">
 				<source
-					media="(min-width: 1440px)"
-					srcset="images/image-header-desktop.webp, images/image-header-desktop.jpg"
+					srcset="./images/image-header-mobile.webp"
+					media="(max-width: 1439px)"
+					type="image/webp"
 				/>
+				<source srcset="./images/image-header-mobile.jpg" media="(max-width: 1439px)" />
 				<source
-					media="(min-width: 375px)"
-					srcset="images/image-header-mobile.webp, images/image-header-mobile.jpg"
+					srcset="./images/image-header-desktop.webp"
+					media="(min-width: 1440px)"
+					type="image/webp"
 				/>
+				<source srcset="./images/image-header-desktop.jpg" media="(min-width: 1440px)" />
 				<img
 					class="main__picture-img"
 					width="480"
